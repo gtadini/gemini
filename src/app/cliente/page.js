@@ -82,28 +82,33 @@ function ClienteContenido() {
 
     // --- Renderizado Condicional ---
     if (estado === 'solicitando') {
-        return <div>Solicitando tu número...</div>;
+        return <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800 text-center p-4">
+        <div className="text-lg animate-pulse">Solicitando tu número...</div>
+      </div>;
     }
     if (estado === 'error') {
-        return <div>Error: {errorMsg || 'Ha ocurrido un problema.'}</div>;
+        return <div className="flex flex-col items-center justify-center min-h-screen bg-red-100 text-red-700 text-center p-4">
+        <h1 className="text-2xl font-bold mb-2">Error</h1>
+        <p>{errorMsg || 'Ha ocurrido un problema.'}</p>
+      </div>;
     }
     if (estado === 'esperando') {
         return (
-            <div>
-                <h1>Tu número es: {numero}</h1>
-                <p>(Comercio: {comercioId})</p>
-                <p>Espera a ser llamado.</p>
-            </div>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-blue-50 text-blue-900 text-center p-4">
+    <h1 className="text-6xl font-bold mb-4">N° {numero}</h1>
+    <p className="text-lg mb-2">(Comercio: {comercioId})</p>
+    <p className="text-md">Espera a ser llamado...</p>
+  </div>
         );
     }
      if (estado === 'llamado') {
         return (
-            <div>
-                <h1>¡Es tu turno!</h1>
-                <h2>Tu número es: {numero}</h2>
-                <p>(Comercio: {comercioId})</p>
-                <p style={{ color: 'green', fontWeight: 'bold' }}>Dirígete a la atención.</p>
-            </div>
+            <div className="flex flex-col items-center justify-center min-h-screen bg-green-100 text-green-900 text-center p-4 animate-pulse">
+            <h1 className="text-4xl font-bold mb-4">¡Es tu turno!</h1>
+            <h2 className="text-6xl font-extrabold mb-2">N° {numero}</h2>
+            <p className="text-lg mb-2">(Comercio: {comercioId})</p>
+            <p className="text-md font-semibold">Dirígete a la atención.</p>
+          </div>
         );
     }
 

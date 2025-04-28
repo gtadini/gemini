@@ -1,8 +1,8 @@
 // generaQR.js
 const QRCode = require('qrcode');
 
-const comercioId = 'COMERCIO-ID-UNICO'; // *IMPORTANTE*: Reemplaza esto con un ID único para tu comercio.  Puedes usar un UUID (ej: 'comercio-abc-123')
-const urlBase = 'https://tu-app-nextjs.vercel.app'; // *IMPORTANTE*: Reemplaza esto con la URL donde desplegarás tu aplicación Next.js.  ¡Asegúrate de que sea la URL correcta!
+const comercioId = 'ID_COMERCIO_1'; // *IMPORTANTE*: Reemplaza esto con un ID único para tu comercio.  Puedes usar un UUID (ej: 'comercio-abc-123')
+const urlBase = 'https://gemini-eta-pied.vercel.app'; // *IMPORTANTE*: Reemplaza esto con la URL donde desplegarás tu aplicación Next.js.  ¡Asegúrate de que sea la URL correcta!
 
 const urlParaQR = `${urlBase}/cliente?comercioId=${comercioId}`; // CORREGIDO:  Usar ${} correctamente para *ambas* variables.
 
