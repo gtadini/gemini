@@ -106,7 +106,7 @@ function ClienteContenido() {
             <div className="flex flex-col items-center justify-center min-h-screen bg-green-100 text-green-900 text-center p-4 animate-pulse">
             <h1 className="text-4xl font-bold mb-4">¡Es tu turno!</h1>
             <h2 className="text-6xl font-extrabold mb-2">N° {numero}</h2>
-            <p className="text-lg mb-2">(Comercio: {comercioId})</p>
+            <p className="text-lg mb-2">(Commercio: {comercioId})</p>
             <p className="text-md font-semibold">Dirígete a la atención.</p>
           </div>
         );
