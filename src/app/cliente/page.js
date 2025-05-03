@@ -89,11 +89,28 @@ function ClienteContenido() {
     }
     if (estado === 'esperando') {
         return (
-            <div>
-                <h1>Tu número es: {numero}</h1>
-                <p>(Comercio: {comercioId})</p>
-                <p>Espera a ser llamado.</p>
-            </div>
+            <div className="flex h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-purple-100">
+        <div className="max-w-sm w-full p-8 bg-white/80 rounded-2xl shadow-xl backdrop-blur-sm text-center">
+          {/* Branding */}
+          <h2 className="text-xs font-semibold tracking-widest text-gray-500 mb-1 uppercase">eturnio.com</h2>
+  
+          {/* Mensaje principal */}
+          <h1 className="text-gray-700 text-xl font-light mb-4">
+            Tu número de turno es
+          </h1>
+  
+          {/* Número asignado */}
+          <div className="text-7xl font-bold text-indigo-600 mb-6 drop-shadow-sm">
+            {numero}
+          </div>
+  
+          {/* Instrucción */}
+          <p className="text-sm text-gray-500">
+            Mostralo cuando seas llamado.
+          </p>
+          <p className="text-sm text-gray-500">Comercio: La Fonte D'Oro</p>
+        </div>
+      </div>
         );
     }
      if (estado === 'llamado') {
